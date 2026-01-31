@@ -1,248 +1,88 @@
-Perfect 👍
-Below is **modern, professional, recruiter-friendly `README.md` content** with **clear highlights, tech badges, images section, and clean explanation**.
-You can **directly copy–paste** this into your `README.md`.
+<h1 align="center" id="title">Enterprise Order Processing System</h1>
 
----
+<p align="center"><img src="https://socialify.git.ci/Biradarmahadev/Enterprise-Order-Processing-System/image?custom_description=A+production-ready+backend+system+built+using+Spring+Boot+that+handles+order+creation%2C+processing%2C+and+persistence+in+a+scalable+and+structured+way.+&amp;custom_language=Spring+Boot&amp;description=1&amp;font=Rokkitt&amp;forks=1&amp;issues=1&amp;language=1&amp;logo=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fen%2Fthumb%2F3%2F30%2FJava_programming_language_logo.svg%2F960px-Java_programming_language_logo.svg.png&amp;name=1&amp;owner=1&amp;pulls=1&amp;stargazers=1&amp;theme=Light" alt="project-image"></p>
 
-```md
-# 🚀 Enterprise Order Processing System
+<p id="description">The Enterprise Order Processing System is a backend application developed using Spring Boot to manage and process orders in an enterprise environment. The system provides RESTful APIs to create retrieve and manage order data efficiently. The application follows a layered architecture consisting of Controller Service and Repository layers ensuring clean code structure and easy maintainability. Order information is stored in a MySQL database and Spring Data JPA is used for database interactions. This project demonstrates how real-world backend systems handle order workflows data persistence and API communication in a scalable and structured manner. It is designed to reflect industry-level backend development practices.</p>
 
-A modern **Enterprise-grade backend application** built using **Java, Spring Boot, Spring Data JPA, and SQL**, designed to handle order management workflows following clean architecture and industry best practices.
+<p align="center"><img src="https://img.shields.io/badge/Java-17-blue" alt="shields"><img src="https://img.shields.io/badge/Spring%20Boot-3.x-brightgreen" alt="shields"><img src="https://img.shields.io/badge/MySQL-8.0-orange" alt="shields"><img src="https://img.shields.io/badge/Maven-Build-success" alt="shields"></p>
 
-> This project focuses on backend engineering concepts such as layered architecture, RESTful APIs, database persistence, and real-world development workflows.
+<h2>🚀 Demo</h2>
 
----
+[http://localhost:8080/orders](http://localhost:8080/orders)
 
-## ✨ Key Highlights
+## Project Screenshots
 
-- Clean **Controller → Service → Repository** architecture
-- RESTful API design using Spring Boot
-- Database persistence with Spring Data JPA & Hibernate
-- In-memory H2 database for fast development
-- Easily configurable for MySQL (production ready)
-- DTO-based request handling
-- Git & Maven based project structure
-- Beginner-friendly yet enterprise-ready
+### Create Order (HIBERNET H2)
+![Create Order](screenshots/h2-orders-table.png)
 
----
+### Fetch Orders (GET API and POST API)
+![Fetch Orders](screenshots/postman-create-order.png)
 
-## 🧰 Tech Stack
+### Orders Stored in MySQL
+![MySQL Table](screenshots/mysql.png)
 
-![Java](https://img.shields.io/badge/Java-17-orange)
-![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.x-brightgreen)
-![Hibernate](https://img.shields.io/badge/Hibernate-JPA-blue)
-![Maven](https://img.shields.io/badge/Maven-Build-red)
-![H2](https://img.shields.io/badge/H2-Database-lightgrey)
-![REST API](https://img.shields.io/badge/REST-API-yellow)
+  
+  
+<h2>🧐 Features</h2>
 
----
+Here're some of the project's best features:
 
-## 🏗 Architecture Overview
+*   Create new orders using REST APIs
+*   Fetch all orders from the database
+*   Fetch order by ID
+*   MySQL database integration
+*   Clean layered architecture (Controller Service Repository)
+*   Uses Spring Data JPA for database operations
+*   Exception handling and validation
 
-```
+<h2>🛠️ Installation Steps:</h2>
 
-Client (Postman / Browser)
-↓
-REST Controller
-↓
-Service Layer
-↓
-Repository (JPA)
-↓
-Database (H2 / MySQL)
+<p>1. Clone the repository</p>
 
 ```
-
-Each layer has a single responsibility, making the system easy to maintain and scale.
-
----
-
-## 📁 Project Structure
-
+git clone https://github.com/Biradarmahadev/Enterprise-Order-Processing-System.git
 ```
 
-order-processing-system
-└── src
-└── main
-└── java
-└── com.mahadev.order_processing_system
-├── controller
-│   └── OrderController.java
-├── service
-│   └── OrderService.java
-├── repository
-│   └── OrderRepository.java
-├── model
-│   └── Order.java
-├── dto
-│   └── OrderRequestDTO.java
-└── OrderProcessingSystemApplication.java
-└── resources
-└── application.properties
+<p>2. Navigate to project directory</p>
 
-````
+```
+cd Enterprise-Order-Processing-System
+```
 
----
+<p>3. Configure MySQL database in application.properties</p>
 
-## ⚙ Configuration
+```
+spring.datasource.url=jdbc:mysql://localhost:3306/order_db spring.datasource.username=root spring.datasource.password=your_password
+```
 
-### application.properties
+<p>4. Run the application</p>
 
-```properties
-spring.datasource.url=jdbc:h2:mem:orderdb
-spring.datasource.driver-class-name=org.h2.Driver
-spring.datasource.username=sa
-spring.datasource.password=
-
-spring.jpa.hibernate.ddl-auto=update
-spring.jpa.show-sql=true
-
-spring.h2.console.enabled=true
-spring.h2.console.path=/h2-console
-````
-
----
-
-## ▶ Running the Application
-
-### Prerequisites
-
-* Java 17
-* Maven
-* Git
-
-### Run Commands
-
-```bash
-mvn clean
+```
 mvn spring-boot:run
 ```
 
-Application will start at:
+<h2>🍰 Contribution Guidelines:</h2>
 
-```
-http://localhost:8080
-```
+Contributions are welcome. Please fork the repository create a new branch and submit a pull request with clear commit messages.
 
----
+  
+  
+<h2>💻 Built with</h2>
 
-## 📡 API Endpoints
+Technologies used in the project:
 
-### ➕ Create Order
+*   Java
+*   Spring Boot
+*   Spring Data JPA
+*   MySQL
+*   Maven
+*   REST APIs
+*   Hibernate
 
-**POST** `/orders`
+<h2>🛡️ License:</h2>
 
-```json
-{
-  "productName": "Laptop",
-  "quantity": 1,
-  "price": 75000
-}
-```
+This project is licensed under the MIT License
 
----
+<h2>💖Like my work?</h2>
 
-### 📄 Get All Orders
-
-**GET** `/orders`
-
-```json
-[
-  {
-    "id": 1,
-    "productName": "Laptop",
-    "quantity": 1,
-    "price": 75000
-  }
-]
-```
-
----
-
-### 🔍 Get Order by ID
-
-**GET** `/orders/{id}`
-
-Example:
-
-```
-GET /orders/1
-```
-
----
-
-## 🧪 Testing with Postman
-
-1. Open Postman
-2. Select HTTP method (GET / POST)
-3. Enter URL: `http://localhost:8080/orders`
-4. For POST:
-
-   * Body → raw → JSON
-5. Click **Send**
-6. Verify response & status code
-
----
-
-## 🗄 Database Access (H2 Console)
-
-URL:
-
-```
-http://localhost:8080/h2-console
-```
-
-Login details:
-
-```
-JDBC URL: jdbc:h2:mem:orderdb
-Username: sa
-Password: (empty)
-```
-
-Check data:
-
-```sql
-SELECT * FROM orders;
-```
-
----
-
-## 🖼 Screenshots (Add your own)
-
-Create a `screenshots/` folder and add:
-
-```md
-![Create Order](screenshots/postman-create-order.png)
-![Get Orders](screenshots/postman-get-orders.png)
-![H2 Database](screenshots/h2-orders-table.png)
-```
-
----
-
-## 🔮 Future Enhancements
-
-* MySQL production configuration
-* Order status tracking
-* Pagination & sorting
-* Global exception handling
-* Swagger API documentation
-* JWT authentication
-* Docker & Docker Compose support
-
----
-
-## 👤 Author
-
-**Mahadev**
-Backend Developer | Java | Spring Boot
-
-GitHub: [https://github.com/Biradarmahadev](https://github.com/Biradarmahadev)
-
----
-
-## 📜 License
-
-This project is open-source and intended for learning, practice, and demonstration purposes.
-
-```
+If you have any questions or suggestions feel free to open an issue or contact me via GitHub.
