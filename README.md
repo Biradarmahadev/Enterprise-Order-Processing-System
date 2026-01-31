@@ -8,13 +8,22 @@
 
 <h2>🚀 Demo</h2>
 
-[http://localhost:8080/orders](http://localhost:8080/orders)
+### 🔁 Application Flow (GIF)
 
-and 
+![Order Processing System Demo](screenshots/demovideo-ezgif.com-video-to-gif-converter.gif)
 
-## 🎬 Project Demo Video
+---
+
+### 🎬 Full Demo Video
 
 [▶️ Watch Demo Video](https://github.com/Biradarmahadev/Enterprise-Order-Processing-System/blob/main/screenshots/demovideo.mp4)
+
+---
+
+### 🔗 Local API Endpoint (Development)
+
+http://localhost:8080/orders
+
 
 
 ## Project Screenshots
