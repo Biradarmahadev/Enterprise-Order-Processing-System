@@ -12,14 +12,14 @@
 
 ## Project Screenshots
 
-### Create Order (POST API)
+### Create Order (HIBERNET H2)
 ![Create Order](screenshots/h2-orders-table.png)
 
-### Fetch Orders (GET API)
-![Fetch Orders](screenshots/mysql.png)
+### Fetch Orders (GET API and POST API)
+![Fetch Orders](screenshots/postman-create-order.png)
 
 ### Orders Stored in MySQL
-![MySQL Table](screenshots/postman-create-order.png)
+![MySQL Table](screenshots/mysql.png)
 
   
   
