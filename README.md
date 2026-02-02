@@ -39,7 +39,7 @@ Ideal for:
 - OpenAPI 3 / Swagger UI documentation  
 - Maven-based build & easy Docker support
 
-## 🏗 Modern Architecture Overview
+## 🏗 Architecture Overview
 
 ```mermaid
 graph TB
