@@ -42,7 +42,7 @@ Ideal for:
 ## 🏗 Modern Architecture Overview
 
 ```mermaid
-graph LR
+graph TB
     %% Modern styling
     classDef client fill:#1e3a8a,stroke:#60a5fa,stroke-width:2px,color:#dbeafe,rx:10px
     classDef gateway fill:#1e293b,stroke:#f472b6,stroke-width:2px,color:#fce7f3,rx:10px
@@ -54,7 +54,7 @@ graph LR
     %% Flow
     A[Client<br>Postman / Frontend / Mobile]:::client -->|HTTPS / REST| B[Spring Boot Application<br>Port 8080]:::gateway
 
-    subgraph "Layered Architecture"
+    subgraph Layered_Architecture
         B --> C[Controller Layer<br>@RestController<br>OrderController]:::controller
         C --> D[Service Layer<br>@Service<br>OrderService]:::service
         D --> E[Repository Layer<br>@Repository<br>OrderRepository<br>Spring Data JPA]:::repo
@@ -69,7 +69,6 @@ graph LR
     classDef legend fill:#111827,stroke:#4b5563,stroke-width:1px,color:#9ca3af
     Legend[→ REST / HTTPS<br>→ Internal Call<br>→ Database Access]:::legend
 
-    style Legend text-align:left
 ```
 <h2>🚀 Demo</h2>
 
